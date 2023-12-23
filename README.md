@@ -76,18 +76,35 @@ Because the terrain is handled from Unreal engine, we will need to make a small 
 
 1.) Open up the `broadside.mis` file located with your `base/missions` folder in your games main directory.
 
-### # Updating the Terrain Asset within the MIS file.
-You will need to locate the `instant SimGroup "Landscape" {}` and replace the entire conents with 
+### # Creating & Updating the MIS file.
 
-``` 
-    instant SimGroup "Landscape"{
-		instant SimTerrain "Terrain"
-		{
-			TerrainAsset = "TA_Broadside";
-			ClipmapMaterialClass = "M_TiledClipmap";
-			ClipmapAsset = "CD_DefaultClipmap";
-		};
-	};
+#### Terrain
+You will need to locate the `instant SimGroup "Landscape" {}` and replace the entire contents with
+```php
+instant SimGroup "Landscape"{
+    instant SimTerrain "Terrain"
+    {
+        TerrainAsset = "TA_Broadside";
+        ClipmapMaterialClass = "M_TiledClipmap";
+        ClipmapAsset = "CD_DefaultClipmap";
+    };
+};
+```
+#### Lighting
+
+You will also need to locate the `instant SimGroup "Lighting" {}` and replace the entire contents with
+```php
+
+instant SimGroup "Lights"
+{
+    instant SimDirectionalLight "Sun"{
+        azimuth = 60;
+        incidence = 35;
+    };
+    instant SimExponentialHeightFog "HeightFog";
+    instant SimSkyAtmosphere "Sky Atmosphere";
+    instant SimSkyLight "Sky Light";
+};
 ```
 
 To alter a map, and apply your own `Terrain Asset` that we created in the previous step; you will want to locate the line
