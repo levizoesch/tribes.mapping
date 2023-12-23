@@ -1,6 +1,8 @@
 # UE5 Starsiege:Tribes
 
-### Basic Maps
+## Maps & Game Modes v1.0.8
+
+#### Basic Maps
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode  |
 |:----------|:------------------------|:---------------------|:-------|:------|:-----------|
@@ -12,9 +14,6 @@
 | x         | Towers                  | TA_Towers            | 170    | 8     | Training   |
 | x         | Retrieval               | TA_Retrieval         | 148    | 8     | Training   |
 | x         | Destroy                 | TA_Destroy           | 148    | 8     | Training   |
-
-
-### Original Maps
 
 #### Defend & Destroy
 
@@ -86,6 +85,7 @@
 | x         | Stonehenge              | TA_Stonehenge        | 170    | 8     | Capture The Flag |
 | x         | Valhalla                | TA_Valhalla          | 148    | 8     | Capture The Flag |
 
-## Later Official Released Maps
 
-## Community Made Maps
+## Maps & Game Modes v1.1.1
+
+## Community Maps
