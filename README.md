@@ -14,6 +14,10 @@
 
 ##### To begin; Download Unreal Engine 5.
 
+WIP...
+
+## Creating a Terrain Asset
+
 1.) Go to your content directory folder within the editor.
 ![doc/img.png](doc/img.png)
 2.) Create Folder structure by right-clicking, and selecting `New Folder`
@@ -66,8 +70,13 @@ Now save.
 
 You have created a new Terrain Asset that you can link insice the `.mis` file for the map.
 
+## Configuring a MIS map file.
 
+1.) Open up the `broadside.mis` file located with your `base/missions` folder in your games main directory.
 
+WIP...
+
+# Heightmap & Map Reference Tables
 ## Maps & Game Modes v1.0.8
 
 If the map shows an `x` within the Available column, then that terrain asset is available to be used natively.
