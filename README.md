@@ -63,55 +63,55 @@ If the map shows an `x` within the Available column, then that terrain asset is 
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode        |
 |:----------|:------------------------|:---------------------|:-------|:------|:-----------------|
-|           | A Dish Best Served Cold |                      |        |       | Defend & Destroy |
-|           | BloodyVengeance         |                      |        |       | Defend & Destroy |
-|           | Hammer Down             |                      |        |       | Defend & Destroy |
-|           | No Quarter              |                      |        |       | Defend & Destroy |
-|           | Seek And Destroy        |                      |        |       | Defend & Destroy |
-|           | Siege                   |                      |        |       | Defend & Destroy |
+|           | A Dish Best Served Cold |                      | 233    |       | Defend & Destroy |
+|           | BloodyVengeance         |                      | 105    |       | Defend & Destroy |
+|           | Hammer Down             |                      | 261    |       | Defend & Destroy |
+|           | No Quarter              |                      | 86     |       | Defend & Destroy |
+|           | Seek And Destroy        |                      | 159    |       | Defend & Destroy |
+|           | Siege                   |                      | 250    |       | Defend & Destroy |
 
 
 #### Find & Retrieve 
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode        |
 |:----------|:------------------------|:---------------------|:-------|:------|:-----------------|
-|           | DeathKnell              |                      |        |       | Find & Retrieve  |
-|           | Fallen                  |                      |        |       | Find & Retrieve  |
-|           | Fog of War              |                      |        |       | Find & Retrieve  |
-|           | Mudslide                |                      |        |       | Find & Retrieve  |
-|           | No Man's Land           |                      |        |       | Find & Retrieve  |
-|           | Strung Out              |                      |        |       | Find & Retrieve  |
+|           | DeathKnell              |                      | 138    |       | Find & Retrieve  |
+|           | Fallen                  |                      | 100    |       | Find & Retrieve  |
+|           | Fog of War              |                      | 119    |       | Find & Retrieve  |
+|           | Mudslide                |                      | 240    |       | Find & Retrieve  |
+|           | No Man's Land           |                      | 158    |       | Find & Retrieve  |
+|           | Strung Out              |                      | 305    |       | Find & Retrieve  |
 
 
 #### Capture & Hold
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode        |
 |:----------|:------------------------|:---------------------|:-------|:------|:-----------------|
-|           | Ant Hill                |                      |        |       | Capture & Hold   |
-|           | Citadels                |                      |        |       | Capture & Hold   |
-|           | Criss Cross             |                      |        |       | Capture & Hold   |
-|           | Peak Performance        |                      |        |       | Capture & Hold   |
-|           | Temple Of Doom          |                      |        |       | Capture & Hold   |
+|           | Ant Hill                |                      | 153    |       | Capture & Hold   |
+|           | Citadels                |                      | 94     |       | Capture & Hold   |
+|           | Criss Cross             |                      | 152    |       | Capture & Hold   |
+|           | Peak Performance        |                      | 167    |       | Capture & Hold   |
+|           | Temple Of Doom          |                      | 73     |       | Capture & Hold   |
 
 #### Death Match
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode        |
 |:----------|:------------------------|:---------------------|:-------|:------|:-----------------|
-|           | Blood Runs Cold         |                      |        |       | Death Match      |
-|           | King Under The Hill     |                      |        |       | Death Match      |
-|           | Peekaboo                |                      |        |       | Death Match      |
-|           | Sand Storm              |                      |        |       | Death Match      |
-|           | The Red Sands           |                      |        |       | Death Match      |
+|           | Blood Runs Cold         |                      | 35     |       | Death Match      |
+|           | King Under The Hill     |                      | 291    |       | Death Match      |
+|           | Peekaboo                |                      | 284    |       | Death Match      |
+|           | Sand Storm              |                      | 64     |       | Death Match      |
+|           | The Red Sands           |                      | 115    |       | Death Match      |
 
 
 #### Mission Training
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode        |
 |:----------|:------------------------|:---------------------|:-------|:------|:-----------------|
-|           | Four Way Dance          |                      |        |       | Mission Training |
-|           | Free For All            |                      |        |       | Mission Training |
-|           | Lucky Seven             |                      |        |       | Mission Training |
-|           | Triple Threat           |                      |        |       | Mission Training |
+|           | Four Way Dance          |                      | 102    |       | Mission Training |
+|           | Free For All            |                      | 153    |       | Mission Training |
+|           | Lucky Seven             |                      | 62     |       | Mission Training |
+|           | Triple Threat           |                      | 230    |       | Mission Training |
 
 
 #### Capture The Flag
