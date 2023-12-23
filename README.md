@@ -44,6 +44,8 @@ Please reference the tables below. If this is a custom made heightmap disregard 
 
 ## Maps & Game Modes v1.0.8
 
+If the map shows an `x` within the Available column, then that terrain asset is available to be used natively.
+
 #### Basic Maps
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode  |
