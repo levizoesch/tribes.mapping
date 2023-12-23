@@ -28,7 +28,7 @@ You should see something as such
 
 You will be given a filter menu, you will need to search for `Terrain Asset`.
 
-![doc/img_7.png](doc/mg_7.png)
+![doc/img_7.png](doc/img_7.png)
 
 4.) Create a name such a `TA_Broadside`, and now open it.
 
