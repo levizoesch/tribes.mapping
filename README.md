@@ -118,9 +118,9 @@ If the map shows an `x` within the Available column, then that terrain asset is 
 
 | Available | Map                     | Terrain Asset        | Height | Scale | Game Mode        |
 |:----------|:------------------------|:---------------------|:-------|:------|:-----------------|
-|           | Blastside               |                      |        |       | Capture The Flag |
-|           | Desert Of Death         |                      |        |       | Capture The Flag |
-|           | Ice Ridge               |                      |        |       | Capture The Flag |
+| x         | Blastside               | TA_Broadside         | -      | -     | Capture The Flag |
+| x         | Desert Of Death         | TA_DesertOfDeath     | 107    | 8     | Capture The Flag |
+| x         | Ice Ridge               | TA_IceRidge          | 144    | 8     | Capture The Flag |
 | x         | Broadside               | TA_Broadside         | 232    | 8     | Capture The Flag |
 | x         | Dangerous Crossing      | TA_DangerousCrossing | 284    | 8     | Capture The Flag |
 | x         | Raindance               | TA_Raindance         | 70     | 8     | Capture The Flag |
