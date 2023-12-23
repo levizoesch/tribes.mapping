@@ -72,7 +72,29 @@ You have created a new Terrain Asset that you can link insice the `.mis` file fo
 
 ## Configuring a MIS map file.
 
+Because the terrain is handled from Unreal engine, we will need to make a small modification to the map `.mis` file.
+
 1.) Open up the `broadside.mis` file located with your `base/missions` folder in your games main directory.
+
+### # Updating the Terrain Asset within the MIS file.
+You will need to locate the `instant SimGroup "Landscape" {}` and replace the entire conents with 
+
+``` 
+    instant SimGroup "Landscape"{
+		instant SimTerrain "Terrain"
+		{
+			TerrainAsset = "TA_Broadside";
+			ClipmapMaterialClass = "M_TiledClipmap";
+			ClipmapAsset = "CD_DefaultClipmap";
+		};
+	};
+```
+
+To alter a map, and apply your own `Terrain Asset` that we created in the previous step; you will want to locate the line
+
+`TerrainAsset = ""` and replace the contents with your desired `TA_YourTerrainAsset`.
+
+### # Defining, or altering spawn points
 
 WIP...
 
@@ -130,13 +152,13 @@ If the map shows an `x` within the Available column, then that terrain asset is 
 
 #### Death Match
 
-| Available | Map                     | Terrain Asset         | Height   | Scale   | Slices | Game Mode        | Heightmap |
-|:----------|:------------------------|:----------------------|:---------|:--------|:-------|:-----------------|:----------|
-| x         | Blood Runs Cold         | TA_BloodRunsCold      | 35       | 8       | 1      | Death Match      | x         |
-| x         | King Under The Hill     | TA_KingUnderTheHill   | 291      | 8       | 1      | Death Match      | x         |
-| x         | Peekaboo                | TA_Peekaboo           | 284      | 8       | 1      | Death Match      | x         |
-| x         | Sand Storm              | TA_SandStorm          | 64       | 8       | 1      | Death Match      | x         |
-| x         | The Red Sands           | TheRedSands           | 115      | 8       | 1      | Death Match      | x         |
+| Available | Map                     | Terrain Asset       | Height   | Scale   | Slices | Game Mode        | Heightmap |
+|:----------|:------------------------|:--------------------|:---------|:--------|:-------|:-----------------|:----------|
+| x         | Blood Runs Cold         | TA_BloodRunsCold    | 35       | 8       | 1      | Death Match      | x         |
+| x         | King Under The Hill     | TA_KingUnderTheHill | 291      | 8       | 1      | Death Match      | x         |
+| x         | Peekaboo                | TA_Peekaboo         | 284      | 8       | 1      | Death Match      | x         |
+| x         | Sand Storm              | TA_SandStorm        | 64       | 8       | 1      | Death Match      | x         |
+| x         | The Red Sands           | TA_TheRedSands      | 115      | 8       | 1      | Death Match      | x         |
 
 
 #### Mission Training
