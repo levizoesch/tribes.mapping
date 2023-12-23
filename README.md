@@ -1,5 +1,15 @@
 # UE5 Starsiege:Tribes - Mapping
 
+## Start
+
+### Prerequisites 
+
+- Unreal Engine `5.3.2`
+- Visual Studios `2022`
+  -  You will need the following Visual Studios packages, you can install via your `Visual Studio Installer` application. 
+
+2.) Take the `ModFPSZ.zip` file and export the entire contents to your `.../YourProject/Plugins`
+
 ### Import Heightmaps into Unreal Engine 5
 
 ##### To begin; Download Unreal Engine 5.
