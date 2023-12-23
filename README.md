@@ -1,4 +1,46 @@
-# UE5 Starsiege:Tribes
+# UE5 Starsiege:Tribes - Mapping
+
+### Import Heightmaps into Unreal Engine 5
+
+##### To begin; Download Unreal Engine 5.
+
+1.) Go to your content directory folder within the editor.
+![doc/img.png](doc/img.png)
+2.) Create Folder structure by right-clicking, and selecting `New Folder`
+
+![doc/img_1.png](doc/img_1.png) 
+
+name it `Heightmaps` and open it up.
+
+![doc/img_2.png](doc/img_2.png)
+
+3.) Import your heightmap
+
+![doc/img_3.png](doc/img_3.png)
+
+You should see something as such
+
+![doc/img_4.png](doc/img_4.png)
+
+4.) Now right click on the open area and navigate to the bottom go to `Miscellaneous > Data Asset` 
+
+![doc/img_5.png](doc/img_5.png)
+
+You will be given a filter menu, you will need to search for `Terrain Asset`.
+
+![doc/img_7.png](doc/mg_7.png)
+
+4.) Create a name such a `TA_Broadside`, and now open it.
+
+Depending on the map that you imported, and working on will determine the height and scale that you set your map to.
+
+Please reference the tables below. If this is a custom made heightmap disregard the tables below.
+
+![doc/img_6.png](doc/img_6.png)
+
+
+
+
 
 ## Maps & Game Modes v1.0.8
 
