@@ -42,13 +42,29 @@ You will be given a filter menu, you will need to search for `Terrain Asset`.
 
 4.) Create a name such a `TA_Broadside`, and now open it.
 
-Depending on the map that you imported, and working on will determine the height and scale that you set your map to.
+Your new Terrain Asset should look like
 
-Please reference the tables below. If this is a custom made heightmap disregard the tables below.
+![doc/img.png](doc/img_8.png)
+
+Next you will need to select the `+` next to `Heightmap List` array element.
+
+This will produce a new dropdown
+
+![doc/img_9.png](doc/img_9.png)
+
+From here, you will need to select the `none` drop down, and search for your Heightmap asset, and select.
+
+![doc/img_10.png](doc/img_10.png)
+
+Depending on the map that you imported, and working on will determine the height and scale that you set your map to. Please reference the tables below. If this is a custom-made heightmap disregard the tables below.
+
+Once you have entered the Heightmap Height Scale, Size Scale, and updated Collision slices, select `Generate` at the top. This will automatically create the remaining components required.
 
 ![doc/img_6.png](doc/img_6.png)
 
+Now save.
 
+You have created a new Terrain Asset that you can link insice the `.mis` file for the map.
 
 
 
