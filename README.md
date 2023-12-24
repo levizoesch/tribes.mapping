@@ -132,7 +132,7 @@ For Example; If you wanted to change fog density on Broadside you could define y
 
 ```
   instant SimExponentialHeightFog "HeightFog"{
-    FogDensity = 25.0;
+    fogDensity = 25.0;
   };
 ```
 
@@ -159,35 +159,35 @@ Below are all the available settings and a brief description on what is required
     - 0 or 1
   bool bOverrideLightColorsWithFogInscatteringColors;
     - 0 or 1
-  FString DirectionalInscatteringColor;
+  string directionalInscatteringColor;
     - String must be structured as "0,0,0,0" to represent RGBA 
-  int DirectionalInscatteringExponent;
+  int directionalInscatteringExponent;
     - Any integar
-  int DirectionalInscatteringStartDistance;
+  int directionalInscatteringStartDistance;
     - Any integar
-  int FogCutoffDistance;
+  int fogCutoffDistance;
     - Any integar
-  int FogDensity;
+  int fogDensity;
     - Any integar
-  int FogHeightFalloff;
+  int fogHeightFalloff;
     - Any integar
-  FString FogInscatteringColor;
+  string fogInscatteringColor;
     - String must be structured as "0,0,0,0" to represent RGBA 
-  int FogMaxOpacity;
+  int fogMaxOpacity;
     - Any integar
-  int FullyDirectionalInscatteringColorDistance;
+  int fullyDirectionalInscatteringColorDistance;
     - Any integar
-  int StartDistance;
+  int startDistance;
     - Any integar
-  FString VolumetricFogAlbedo;
+  string volumetricFogAlbedo;
     - String must be structured as "0,0,0,0" to represent RGBA
-  int VolumetricFogDistance;
+  int volumetricFogDistance;
     - Any integar
-  FString VolumetricFogEmissive;
+  string volumetricFogEmissive;
     - String must be structured as "0,0,0,0" to represent RGBA
-  int VolumetricFogExtinctionScale;
+  int volumetricFogExtinctionScale;
     - Any integar
-  int VolumetricFogScatteringDistribution;
+  int volumetricFogScatteringDistribution;
     - Any integar
 ```
 
