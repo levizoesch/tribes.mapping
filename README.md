@@ -78,6 +78,14 @@ Because the terrain is handled from Unreal engine, we will need to make a small 
 
 ### # Creating & Updating the MIS file.
 
+#### Helper Tool
+I have created a helper tool located within the main directory of this repository called `missionConvert.html` that will automatically perform the actions below. Simply open this page up in your preferred browser. 
+
+![doc/img_11.png](doc/img_11.png)
+
+
+You will need to note that the current naming convention of the `.mis` file that you are going to be selecting, will generate your `TA_` naming convention for you automatically, however you can manually override this option by defining it within the `Terrain Asset Value:` input field.
+
 #### Terrain
 You will need to locate the `instant SimGroup "Landscape" {}` and replace the entire contents with
 ```php
