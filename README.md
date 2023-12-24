@@ -116,7 +116,7 @@ instant SimGroup "Lights"
 
 With Unreal Engine 5 we are able to do some pretty remarkable stuff within the Tribes world. We have tried to pack as much as we can, as far as dynamic settings, and what is capable of being defined within map files specifically.
 
-For more context as to what each setting does please visit the Unreal Engine 5 Documents on [UExponentialHeightFogComponent](https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/Components/UExponentialHeightFogComponent/)
+For more context as to what each setting does please visit the Unreal Engine 5 Documents on [UExponentialHeightFogComponent](https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/Components/UExponentialHeightFogComponent/) I would also take a look at reading [An overview of the height-based, distant fog system.](https://docs.unrealengine.com/5.3/en-US/exponential-height-fog-in-unreal-engine/)
 
 The available `.mis` file settings specifically to the `instant SimGroup` of `instant SimExponentialHeightFog "HeightFog";` options are 
 
