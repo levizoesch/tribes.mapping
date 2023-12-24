@@ -1,8 +1,6 @@
 # UE5 Starsiege:Tribes - Mapping
 
-## Start
-
-### Prerequisites 
+### ⭐Prerequisites ⭐
 
 - Unreal Engine `5.3.2`
 - Visual Studios `2022`
@@ -10,13 +8,13 @@
 
 2.) Take the `ModFPSZ.zip` file and export the entire contents to your `.../YourProject/Plugins`
 
-### Import Heightmaps into Unreal Engine 5
+### ⭐Import Heightmaps into Unreal Engine 5⭐
 
-##### To begin; Download Unreal Engine 5.
+##### ⭐To begin; Download Unreal Engine 5.⭐
 
 WIP...
 
-## Creating a Terrain Asset
+## ⭐Creating a Terrain Asset⭐
 
 1.) Go to your content directory folder within the editor.
 ![doc/img.png](doc/img.png)
@@ -70,15 +68,15 @@ Now save.
 
 You have created a new Terrain Asset that you can link insice the `.mis` file for the map.
 
-## Configuring a MIS map file.
+## ⭐Configuring a MIS map file.⭐
 
 Because the terrain is handled from Unreal engine, we will need to make a small modification to the map `.mis` file.
 
 1.) Open up the `broadside.mis` file located with your `base/missions` folder in your games main directory.
 
-### # Creating & Updating the MIS file.
+### ⭐# Creating & Updating the MIS file.⭐
 
-#### Helper Tool
+#### ⭐ Helper Tool⭐
 I have created a helper tool located within the main directory of this repository called `missionConvert.html` that will automatically perform the actions below. Simply open this page up in your preferred browser. 
 
 ![doc/img_11.png](doc/img_11.png)
@@ -86,7 +84,7 @@ I have created a helper tool located within the main directory of this repositor
 
 You will need to note that the current naming convention of the `.mis` file that you are going to be selecting, will generate your `TA_` naming convention for you automatically, however you can manually override this option by defining it within the `Terrain Asset Value:` input field.
 
-#### Terrain
+#### ⭐Terrain ⭐
 You will need to locate the `instant SimGroup "Landscape" {}` and replace the entire contents with
 ```php
 instant SimGroup "Landscape"{
@@ -98,8 +96,7 @@ instant SimGroup "Landscape"{
     };
 };
 ```
-#### Lighting
-
+#### ⭐ Sun, Light, Fog, Atmosphere Settings ⭐
 You will also need to locate the `instant SimGroup "Lighting" {}` and replace the entire contents with
 ```php
 
@@ -115,16 +112,91 @@ instant SimGroup "Lights"
 };
 ```
 
-To alter a map, and apply your own `Terrain Asset` that we created in the previous step; you will want to locate the line
+#### ⭐ Sun, Light, Fog, Atmosphere Settings (Advanced)⭐ 
 
-`TerrainAsset = ""` and replace the contents with your desired `TA_YourTerrainAsset`.
+With Unreal Engine 5 we are able to do some pretty remarkable stuff within the Tribes world. We have tried to pack as much as we can, as far as dynamic settings, and what is capable of being defined within map files specifically.
 
-### # Defining, or altering spawn points
+For more context as to what each setting does please visit the Unreal Engine 5 Documents on [UExponentialHeightFogComponent](https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/Components/UExponentialHeightFogComponent/)
+
+The available `.mis` file settings specifically to the `instant SimGroup` of `instant SimExponentialHeightFog "HeightFog";` options are 
+
+*Note If your `SimExponentialHeightFog` is set to `instant SimExponentialHeightFog "HeightFog";` you will need to update it as such
+
+```
+  instant SimExponentialHeightFog "HeightFog"{
+    // Define Your Settings
+  };
+```
+
+For Example; If you wanted to change fog density on Broadside you could define your settings as
+
+```
+  instant SimExponentialHeightFog "HeightFog"{
+    FogDensity = 25.0;
+  };
+```
+
+And Broadside would go from
+
+![doc/img_12.png](doc/img_12.png)
+
+to
+
+![doc/img_13.png](doc/img_13.png)
+
+Or you can go as crazy and make Broadside eerie 👻 by setting the FogDensity to 80%
+
+![doc/img_14.png](doc/img_14.png)
+
+Explore some of the advanced options listed below.
+
+##### ⭐Supported UExponentialHeightFogComponent Options⭐
+
+Below are all the available settings and a brief description on what is required to be defined within your `.mis` file.
+
+```
+  bool bEnableVolumetricFog;
+    - 0 or 1
+  bool bOverrideLightColorsWithFogInscatteringColors;
+    - 0 or 1
+  FString DirectionalInscatteringColor;
+    - String must be structured as "0,0,0,0" to represent RGBA 
+  int DirectionalInscatteringExponent;
+    - Any integar
+  int DirectionalInscatteringStartDistance;
+    - Any integar
+  int FogCutoffDistance;
+    - Any integar
+  int FogDensity;
+    - Any integar
+  int FogHeightFalloff;
+    - Any integar
+  FString FogInscatteringColor;
+    - String must be structured as "0,0,0,0" to represent RGBA 
+  int FogMaxOpacity;
+    - Any integar
+  int FullyDirectionalInscatteringColorDistance;
+    - Any integar
+  int StartDistance;
+    - Any integar
+  FString VolumetricFogAlbedo;
+    - String must be structured as "0,0,0,0" to represent RGBA
+  int VolumetricFogDistance;
+    - Any integar
+  FString VolumetricFogEmissive;
+    - String must be structured as "0,0,0,0" to represent RGBA
+  int VolumetricFogExtinctionScale;
+    - Any integar
+  int VolumetricFogScatteringDistribution;
+    - Any integar
+```
+
+### ⭐ Defining, or altering spawn points⭐
 
 WIP...
 
-# Heightmap & Map Reference Tables
-## Maps & Game Modes v1.0.8
+# ⭐Heightmap & Map Reference Tables⭐
+## ⭐Official Maps & Game Modes⭐
 
 If the map shows an `x` within the Available column, then that terrain asset is available to be used natively.
 
@@ -210,8 +282,5 @@ If the map shows an `x` within the Available column, then that terrain asset is 
 | x         | Snowblind               | TA_Snowblind         | 100    | 8     | 1      | Capture The Flag | x         |
 | x         | Stonehenge              | TA_Stonehenge        | 170    | 8     | 1      | Capture The Flag | x         |
 | x         | Valhalla                | TA_Valhalla          | 148    | 8     | 1      | Capture The Flag | x         |
-
-
-## Maps & Game Modes v1.1.1
 
 ## Community Maps
