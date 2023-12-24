@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload and Modification</title>
+    <style>
+        #preview-container {
+            padding: 15px;
+            border-radius:10px;
+            height: 800px;
+            width: fit-content;
+            max-width: 600px;
+            min-width: 300px;
+            background:#808080;
+            overflow-y: auto;
+            white-space: pre;
+            font-family: monospace;
+            color:#4cff00;
+        }
+    </style>
+</head>
+<body>
+    <h3>Map Conversion Tool v1.0.0</h3>
+    <input type="file" id="fileInput" accept=".mis" />
+    <br />
+    <label for="terrainAssetInput">TerrainAsset Value:</label>
+    <input type="text" id="terrainAssetInput" />
+    <button onclick="convertAndDownload()">Convert</button>
+    <button onclick="downloadFile()">Download</button>
+    <div id="preview-container"></div>
+
+    <script>let originalFileName = '';
+
+        document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                originalFileName = file.name;
+
+                // Set default value for terrainAssetInput
+                const terrainAssetInput = document.getElementById('terrainAssetInput');
+                terrainAssetInput.value = `TA_${originalFileName.replace(/\..+$/, '')}`;
+
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const fileContent = e.target.result;
+                    displayFileContent(fileContent);
+                };
+
+                reader.readAsText(file);
+            }
+        }
+
+        function displayFileContent(content) {
+            const previewContainer = document.getElementById('preview-container');
+            previewContainer.textContent = content;
+        }
+
+        function convertAndDownload() {
+            const terrainAssetValue = document.getElementById('terrainAssetInput').value;
+
+            if (!terrainAssetValue) {
+                alert('Please enter a value for TerrainAsset.');
+                return;
+            }
+
+            let content = document.getElementById('preview-container').textContent;
+
+            // Define the Terrain Asset Name
+            content = content.replace(
+                /TerrainAsset\s*=\s*".*?";/,
+                `TerrainAsset = "${terrainAssetValue}";`
+            );
+
+            // Remove Lights Option 1
+            content = content.replace(
+                /instant\s+SimGroup\s+"Lights"\s*;/,
+                ''
+            );
+
+            // Remove Lights Option 2
+            content = content.replace(
+                /instant SimGroup "Lights"\s*{(?:[^{}]*{[^{}]*})*[\s\S]*?}\s*;/,
+                ''
+            );
+
+            // Replace the entire Landscape object with new contents.
+            content = content.replace(
+                /instant SimGroup "Landscape"\s*{(?:[^{}]*{[^{}]*})*[\s\S]*?}\s*;/,
+                `instant SimGroup "Landscape"{
+    instant SimTerrain "Terrain"
+    {
+        TerrainAsset = "${terrainAssetValue}";
+        ClipmapMaterialClass = "M_TiledClipmap";
+        ClipmapAsset = "CD_DefaultClipmap";
+    };
+};
+instant SimGroup "Lights"
+    {
+        instant SimDirectionalLight "Sun"{
+            azimuth = 60;
+            incidence = 35;
+        };
+        instant SimExponentialHeightFog "HeightFog";
+        instant SimSkyAtmosphere "Sky Atmosphere";
+        instant SimSkyLight "Sky Light";
+    };`);
+
+            // Display the modified content
+            displayFileContent(content);
+        }
+
+        function downloadModifiedFile(content) {
+            const blob = new Blob([content], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = originalFileName;
+            link.click();
+        }
+
+        function downloadFile() {
+            const content = document.getElementById('preview-container').textContent;
+            downloadModifiedFile(content);
+        }</script>
+</body>
+</html>
