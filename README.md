@@ -152,43 +152,27 @@ Explore some of the advanced options listed below.
 
 ##### ⭐Supported UExponentialHeightFogComponent Options⭐
 
-Below are all the available settings and a brief description on what is required to be defined within your `.mis` file.
+Below are all the available settings on what is available to be defined within your `.mis` file.
+
+*Note If you know of appropriate ranges for each of these settings please let me know and I can update these docs. I just plugged in random values to test that they worked, and that I got some effect on screen.
 
 ```
-  bool bEnableVolumetricFog;
-    - 0 or 1
-  bool bOverrideLightColorsWithFogInscatteringColors;
-    - 0 or 1
-  string directionalInscatteringColor;
-    - String must be structured as "0,0,0,0" to represent RGBA 
-  int directionalInscatteringExponent;
-    - Any integar
-  int directionalInscatteringStartDistance;
-    - Any integar
-  int fogCutoffDistance;
-    - Any integar
-  int fogDensity;
-    - Any integar
-  int fogHeightFalloff;
-    - Any integar
-  string fogInscatteringColor;
-    - String must be structured as "0,0,0,0" to represent RGBA 
-  int fogMaxOpacity;
-    - Any integar
-  int fullyDirectionalInscatteringColorDistance;
-    - Any integar
-  int startDistance;
-    - Any integar
-  string volumetricFogAlbedo;
-    - String must be structured as "0,0,0,0" to represent RGBA
-  int volumetricFogDistance;
-    - Any integar
-  string volumetricFogEmissive;
-    - String must be structured as "0,0,0,0" to represent RGBA
-  int volumetricFogExtinctionScale;
-    - Any integar
-  int volumetricFogScatteringDistribution;
-    - Any integar
+  fogDirectionalInscatteringColor = "0.5, 0.8, 1.0, 1.0";
+  fogDirectionalInscatteringExponent = 55.0;
+  fogDirectionalInscatteringStartDistance = 55.0;
+  fogCutoffDistance = 0;
+  fogDensity = 55.0;
+  fogHeightFalloff = 0.40;
+  fogHeightOffset = 200;
+  fogInscatteringColor = "0.5, 0.8, 1.0, 1.0";
+  fogMaxOpacity = 90;
+  fogStartDistance = 200;
+  volumetricFog = 25.0;
+  volumetricFogAlbedo = "255, 0.0, 0.0, 0.10";
+  volumetricFogDistance = 150;
+  volumetricFogEmissive = "0.0, 255.0, 0.0, 0.10";
+  volumetricFogExtinctionScale = 2;
+  volumetricFogScatteringDistribution = 1;
 ```
 
 ### ⭐ Defining, or altering spawn points⭐
