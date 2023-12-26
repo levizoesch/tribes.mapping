@@ -66,7 +66,7 @@ Once you have entered the Heightmap Height Scale, Size Scale, and updated Collis
 
 Now save.
 
-You have created a new Terrain Asset that you can link insice the `.mis` file for the map.
+You have created a new Terrain Asset that you can link inside the `.mis` file for the map.
 
 ## ⭐Configuring a MIS map file.⭐
 
@@ -116,9 +116,12 @@ instant SimGroup "Lights"
 
 With Unreal Engine 5 we are able to do some pretty remarkable stuff within the Tribes world. We have tried to pack as much as we can, as far as dynamic settings, and what is capable of being defined within map files specifically.
 
+
+# ⭐ Fog
+
 For more context as to what each setting does please visit the Unreal Engine 5 Documents on [UExponentialHeightFogComponent](https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/Components/UExponentialHeightFogComponent/) I would also take a look at reading [An overview of the height-based, distant fog system.](https://docs.unrealengine.com/5.3/en-US/exponential-height-fog-in-unreal-engine/)
 
-The available `.mis` file settings specifically to the `instant SimGroup` of `instant SimExponentialHeightFog "HeightFog";` options are 
+The available `.mis` file settings specifically to the `instant SimGroup` of `instant SimExponentialHeightFog "HeightFog";` options are
 
 *Note If your `SimExponentialHeightFog` is set to `instant SimExponentialHeightFog "HeightFog";` you will need to update it as such
 
@@ -150,13 +153,7 @@ Or you can go as crazy and make Broadside eerie 👻 by setting the FogDensity t
 
 Explore some of the advanced options listed below.
 
-##### ⭐Supported UExponentialHeightFogComponent Options⭐
-
-Below are all the available settings on what is available to be defined within your `.mis` file.
-
 *Note If you know of appropriate ranges for each of these settings please let me know and I can update these docs. I just plugged in random values to test that they worked, and that I got some effect on screen.
-
-# Fog
 
 ```
   fogDirectionalInscatteringColor = "0.5, 0.8, 1.0, 1.0";
@@ -177,7 +174,8 @@ Below are all the available settings on what is available to be defined within y
   volumetricFogScatteringDistribution = 1;
 ```
 
-### Sky Atmosphere
+
+# ⭐ Sky Atmosphere
 
 For more information see [Unreal Engine 5.3 Sky Atmosphere Component](https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/Components/USkyAtmosphereComponent/)
 
