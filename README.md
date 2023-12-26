@@ -156,6 +156,8 @@ Below are all the available settings on what is available to be defined within y
 
 *Note If you know of appropriate ranges for each of these settings please let me know and I can update these docs. I just plugged in random values to test that they worked, and that I got some effect on screen.
 
+# Fog
+
 ```
   fogDirectionalInscatteringColor = "0.5, 0.8, 1.0, 1.0";
   fogDirectionalInscatteringExponent = 55.0;
@@ -174,6 +176,45 @@ Below are all the available settings on what is available to be defined within y
   volumetricFogExtinctionScale = 2;
   volumetricFogScatteringDistribution = 1;
 ```
+
+### Sky Atmosphere
+
+For more information see [Unreal Engine 5.3 Sky Atmosphere Component](https://docs.unrealengine.com/5.3/en-US/API/Runtime/Engine/Components/USkyAtmosphereComponent/)
+
+```
+  instant SimSkyAtmosphere "Sky Atmosphere" {
+    // Define Your Settings
+  };
+```
+
+```
+  aerialPerspectiveViewDistanceScale = 0.0;
+  atmosphereHeight = 0.0;
+  bottomRadius = 0.0;
+  groundAlbedo = "0.0, 0.0, 0.0, 0.0";
+  heightFogContribution = 0.0;
+  mieAbsorption = "0.0, 0.0, 0.0, 0.0";
+  mieAbsorptionScale = 0.0;
+  mieAnisotropy = 0.0;
+  mieExponentialDistribution = 0.0;
+  mieScattering = "0.0, 0.0, 0.0, 0.0";
+  multiScatteringScale = 0.0;
+  multiScatteringFactor = 0.0;
+  otherAbsorption = "0.0, 0.0, 0.0, 0.0";
+  otherAbsorptionScale = 0.0;
+  rayleighExponentialDistribution = 0.0;
+  rayleighScattering = "0.0, 0.0, 0.0, 0.0";
+  rayleighScatteringScale = 0.0;
+  skyLuminanceFactor = "0.0, 0.0, 0.0, 0.0";
+```
+
+##### Console Debug Messages
+You can open up the `defaultgame.ini` settings and set `bDumpMapSettingsLog` to `True` or `False` to have a Console Map Settings output log for debugging purposes.
+```
+[/Script/JPB.SimLighting]
+bDumpMapSettingsLog=True
+```
+
 
 ### ⭐ Defining, or altering spawn points⭐
 
