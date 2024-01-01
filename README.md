@@ -156,24 +156,48 @@ Explore some of the advanced options listed below.
 *Note If you know of appropriate ranges for each of these settings please let me know and I can update these docs. I just plugged in random values to test that they worked, and that I got some effect on screen.
 
 ```
-  fogDirectionalInscatteringColor = "0.5, 0.8, 1.0, 1.0";
-  fogDirectionalInscatteringExponent = 55.0;
-  fogDirectionalInscatteringStartDistance = 55.0;
-  fogCutoffDistance = 0;
-  fogDensity = 55.0;
-  fogHeightFalloff = 0.40;
-  fogHeightOffset = 200;
-  fogInscatteringColor = "0.5, 0.8, 1.0, 1.0";
-  fogMaxOpacity = 90;
-  fogStartDistance = 200;
-  volumetricFog = 25.0;
-  volumetricFogAlbedo = "255, 0.0, 0.0, 0.10";
-  volumetricFogDistance = 150;
-  volumetricFogEmissive = "0.0, 255.0, 0.0, 0.10";
-  volumetricFogExtinctionScale = 2;
-  volumetricFogScatteringDistribution = 1;
+  fogDirectionalInscatteringColor = "0.0, 0.0, 0.0, 0.0";
+  fogDirectionalInscatteringExponent = 0.0;
+  fogDirectionalInscatteringStartDistance = 0.0;
+  fogCutoffDistance = 0.0;
+  fogDensity = 0.0;
+  fogHeightFalloff = 0.0;
+  fogHeightOffset = 0.0;
+  fogInscatteringColor = "0.0, 0.0, 0.0, 0.0";
+  fogMaxOpacity = 0.0;
+  fogStartDistance = 0.0;
+  volumetricFog = 0.0;
+  volumetricFogAlbedo = "0.0, 0.0, 0.0, 0.0";
+  volumetricFogDistance = 0.0;
+  volumetricFogEmissive = "0.0, 0.0, 0.0, 0.0";
+  volumetricFogExtinctionScale = 0.0;
+  volumetricFogScatteringDistribution = 0.0;
+```
+# ⭐ Wind
+
+
+For Speedtree assets only, but this will be available.
+
+To define wind settings within your `mis` file, you may use the `SimWind "Wind"` object.
+
+```
+instant SimWind "Wind" {
+
+};
 ```
 
+The available attributes are:
+
+```
+windMinimumGustAmount = 3.0;
+windMaximumGustAmount = 5.0;
+windSpeed = 4.0;
+windStrength = 2.0;
+windRadius = 50.0;
+windType = 1;
+```
+
+Wind Type is a `1` to represent `Directional` or `2` or `Point`. If set to `0` or anything else, no settings will be defined. And you may see a Map Settings warning depending on the defined value.
 
 # ⭐ Sky Atmosphere
 
@@ -212,7 +236,6 @@ You can open up the `defaultgame.ini` settings and set `bDumpMapSettingsLog` to 
 [/Script/JPB.SimLighting]
 bDumpMapSettingsLog=True
 ```
-
 
 ### ⭐ Defining, or altering spawn points⭐
 
