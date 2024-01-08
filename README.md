@@ -6,7 +6,11 @@
 - Visual Studios `2022`
   -  You will need the following Visual Studios packages, you can install via your `Visual Studio Installer` application. 
 
+________________________________________________________
+
 2.) Take the `ModFPSZ.zip` file and export the entire contents to your `.../YourProject/Plugins`
+
+________________________________________________________
 
 ### ⭐Import Heightmaps into Unreal Engine 5⭐
 
@@ -14,6 +18,7 @@
 
 WIP...
 
+________________________________________________________
 ## ⭐Creating a Terrain Asset⭐
 
 1.) Go to your content directory folder within the editor.
@@ -68,23 +73,29 @@ Now save.
 
 You have created a new Terrain Asset that you can link inside the `.mis` file for the map.
 
-## ⭐Configuring a MIS map file.⭐
+________________________________________________________ 
 
-Because the terrain is handled from Unreal engine, we will need to make a small modification to the map `.mis` file.
 
-1.) Open up the `broadside.mis` file located with your `base/missions` folder in your games main directory.
-
-### ⭐# Creating & Updating the MIS file.⭐
+# ⭐# Creating & Updating the MIS file.⭐
 
 #### ⭐ Helper Tool⭐
-I have created a helper tool located within the main directory of this repository called `missionConvert.html` that will automatically perform the actions below. Simply open this page up in your preferred browser. 
+I have created a helper tool located within the main directory of this repository called `missionConvert.html` that will automatically perform the actions below. Simply open this page up in your preferred browser.
 
 ![doc/img_11.png](doc/img_11.png)
 
 
 You will need to note that the current naming convention of the `.mis` file that you are going to be selecting, will generate your `TA_` naming convention for you automatically, however you can manually override this option by defining it within the `Terrain Asset Value:` input field.
 
-#### ⭐Terrain ⭐
+
+## ⭐Configuring a MIS map file.⭐
+
+Because the terrain is handled from Unreal engine, we will need to make a small modification to the map `.mis` file.
+
+1.) Open up the `broadside.mis` file located with your `base/missions` folder in your games main directory.
+
+________________________________________________________ 
+
+## ⭐Terrain ⭐
 You will need to locate the `instant SimGroup "Landscape" {}` and replace the entire contents with
 ```php
 instant SimGroup "Landscape"{
@@ -96,26 +107,31 @@ instant SimGroup "Landscape"{
     };
 };
 ```
-#### ⭐ Sun, Light, Fog, Atmosphere Settings ⭐
-You will also need to locate the `instant SimGroup "Lighting" {}` and replace the entire contents with
-```php
+________________________________________________________ 
 
-instant SimGroup "Lights"
-{
-    instant SimDirectionalLight "Sun"{
-        azimuth = 60;
-        incidence = 35;
-    };
-    instant SimExponentialHeightFog "HeightFog";
-    instant SimSkyAtmosphere "Sky Atmosphere";
-    instant SimSkyLight "Sky Light";
-};
+## ⭐ Environmental Settings ⭐
+
+There are various components to the Environmental settings that you can utilize. They each have a section below.
+
+```
+- Cloud
+- Directional Light
+- Fog
+- Sky Atmosphere
+- Sky Light
+- Wind
 ```
 
-#### ⭐ Sun, Light, Fog, Atmosphere Settings (Advanced)⭐ 
+With Unreal Engine 5 we are able to do some pretty remarkable stuff within the game world. We have tried to pack as much as we can, as far as dynamic settings, and what is capable of being defined within map files specifically.
+________________________________________________________ 
 
-With Unreal Engine 5 we are able to do some pretty remarkable stuff within the Tribes world. We have tried to pack as much as we can, as far as dynamic settings, and what is capable of being defined within map files specifically.
+# ⭐ Cloud
+WIP
+________________________________________________________ 
 
+# ⭐ Directional Light
+WIP
+________________________________________________________ 
 
 # ⭐ Fog
 
@@ -173,6 +189,8 @@ Explore some of the advanced options listed below.
   volumetricFogExtinctionScale = 0.0;
   volumetricFogScatteringDistribution = 0.0;
 ```
+________________________________________________________ 
+
 # ⭐ Wind
 
 
@@ -198,6 +216,11 @@ windType = 1;
 ```
 
 Wind Type is a `1` to represent `Directional` or `2` or `Point`. If set to `0` or anything else, no settings will be defined. And you may see a Map Settings warning depending on the defined value.
+________________________________________________________ 
+
+# ⭐ Sky Light
+WIP
+________________________________________________________ 
 
 # ⭐ Sky Atmosphere
 
@@ -229,6 +252,7 @@ For more information see [Unreal Engine 5.3 Sky Atmosphere Component](https://do
   rayleighScatteringScale = 0.0;
   skyLuminanceFactor = "0.0, 0.0, 0.0, 0.0";
 ```
+________________________________________________________ 
 
 ##### Console Debug Messages
 You can open up the `defaultgame.ini` settings and set `bDumpMapSettingsLog` to `True` or `False` to have a Console Map Settings output log for debugging purposes.
@@ -237,9 +261,17 @@ You can open up the `defaultgame.ini` settings and set `bDumpMapSettingsLog` to 
 bDumpMapSettingsLog=True
 ```
 
+*NOT FUNCTIONAL YET*
+
+You may also use in game `setMapSettingsLog(1)` for true and `setMapSettingsLog(0)` for false.
+
+________________________________________________________ 
+
 ### ⭐ Defining, or altering spawn points⭐
 
 WIP...
+
+________________________________________________________ 
 
 # ⭐Heightmap & Map Reference Tables⭐
 ## ⭐Official Maps & Game Modes⭐
@@ -329,4 +361,10 @@ If the map shows an `x` within the Available column, then that terrain asset is 
 | x         | Stonehenge              | TA_Stonehenge        | 170    | 8     | 1      | Capture The Flag | x         |
 | x         | Valhalla                | TA_Valhalla          | 148    | 8     | 1      | Capture The Flag | x         |
 
+________________________________________________________ 
+
 ## Community Maps
+
+L-Spiro - Golden Eye Maps
+
+________________________________________________________ 
