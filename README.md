@@ -114,7 +114,7 @@ ________________________________________________________
 There are various components to the Environmental settings that you can utilize. They each have a section below.
 
 ```
-- Cloud
+- Volumetric Clouds
 - Directional Light
 - Fog
 - Sky Atmosphere
